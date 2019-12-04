@@ -10,12 +10,12 @@ import 'package:polygon_clipper/polygon_clipper.dart';
 //void main() => runApp(HexGridWidgetExample());
 
 class HexGridWidgetExample extends StatelessWidget {
-  final double _minHexWidgetSize = 128;
-  final double _maxHexWidgetSize = 128;
+  final double _minHexWidgetSize = 70;
+  final double _maxHexWidgetSize = 70;
   final double _scaleFactor = 0.2;
   final double _densityFactor = 1.75;
   final double _velocityFactor = 0.0;
-  final int _numOfHexGridChildWidgets = 6;
+  final int _numOfHexGridChildWidgets = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +95,7 @@ return ClipPolygon(
   PolygonBoxShadow(color: Colors.black, elevation: 1.0),
   PolygonBoxShadow(color: Colors.grey, elevation: 5.0)
  ],
- child: Container(color: Colors.lightBlue),
+ child: Container(color: Colors.limeAccent),
 );
 
   }
