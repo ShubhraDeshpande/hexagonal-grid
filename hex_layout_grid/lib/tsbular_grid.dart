@@ -15,7 +15,7 @@ class HexGridWidgetExample extends StatelessWidget {
   final double _scaleFactor = 0.2;
   final double _densityFactor = 1.75;
   final double _velocityFactor = 0.0;
-  final int _numOfHexGridChildWidgets = 35;
+  final int _numOfHexGridChildWidgets = 1;
 
   @override
   Widget build(BuildContext context) {
