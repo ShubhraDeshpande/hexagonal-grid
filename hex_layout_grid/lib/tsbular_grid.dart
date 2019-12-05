@@ -24,10 +24,15 @@ class HexGridWidgetExample extends StatelessWidget {
           title: Text("Example"),
           centerTitle: true,
         ),
-        body: HexGridWidget(
-            children: createHexGridChildren(_numOfHexGridChildWidgets),
-            hexGridContext: HexGridContext(_minHexWidgetSize, _maxHexWidgetSize,
-                _scaleFactor, _densityFactor, _velocityFactor)));
+        body: Material(
+          type: MaterialType.transparency,
+          child: Container(color: Colors.white,
+              child: HexGridWidget(
+          children: createHexGridChildren(_numOfHexGridChildWidgets),
+          hexGridContext: HexGridContext(_minHexWidgetSize, _maxHexWidgetSize,
+              _scaleFactor, _densityFactor, _velocityFactor)),
+            ),
+        ));
   }
 
   //This would likely be a service (RESTful or DB) that retrieves some data and
@@ -36,9 +41,7 @@ class HexGridWidgetExample extends StatelessWidget {
     List<HexGridChild> children = [];
 
     for (int i = 0; i < numOfChildren; i++) {
-      print("+++++=====+++++=====++++++======++++++======++++++======++++++=======+++++======+++++======");
-      print(ExampleHexGridChild(i));
-      print("+++++=====+++++=====++++++======++++++======++++++======++++++=======+++++======+++++======");
+     
       children.add(ExampleHexGridChild(i));
     }
 
@@ -52,15 +55,7 @@ class HexGridWidgetExample extends StatelessWidget {
 // as much flexibility when building and sizing your HexGridChild widget.
 class ExampleHexGridChild extends HexGridChild {
   final int index;
-  final List<Color> orbitalColors = [
-    Color(0xFF2D365B),
-    Color(0xFF083663),
-    Color(0xFF07489C),
-    Color(0xFF165DC0),
-    Color(0xFF0E90E1),
-    Color(0xFF89D3FB),
-    Color(0xFFAFDBDE)
-  ];
+ 
 
   ExampleHexGridChild(this.index);
 
