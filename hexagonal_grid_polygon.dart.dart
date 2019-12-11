@@ -205,9 +205,9 @@ class UIHex {
     }
     int i =0;
     List<UIHex> UIMap = [];
-    for ( int r =0; r < sqrt(list.length).floor(); r++){
+    for ( int r =0; r < sqrt(list.length).ceil(); r++){
       int r_offset = (r/2).ceil();
-      for (int q= -r_offset; q < sqrt(list.length).floor() - r_offset ; q++){
+      for (int q= -r_offset; q < sqrt(list.length).ceil() - r_offset ; q++){
       //  for (int q= -r_offset; q <= list.length ; q++){
         if (i >= list.length) {
           print("breaking insoide");
@@ -219,6 +219,7 @@ class UIHex {
       }
 
     }
+    
     print("our data");
     //print(UIMap);
 
@@ -230,6 +231,7 @@ class UIHex {
        
 
     }
+    print("total elements are "+ UIMap.length.toString());
   return UIMap;
     //return hexList;
   }
