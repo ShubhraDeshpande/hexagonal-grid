@@ -322,7 +322,7 @@ class UIHex {
     }
 
     //Convert to cube coordinates
-    //todo: get it back to axial 
+    //todo: get it back to axial
     x = q;
     z = r;
     y = -x - z;
